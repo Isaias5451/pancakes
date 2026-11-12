@@ -1,0 +1,179 @@
+/* MINI PANCAKES BY MINI WAFFLE'S
+   Paleta: chocolate, negro, crema y dorado.
+   Puedes modificar estos colores desde :root. */
+:root {
+  --ink: #21130e;
+  --chocolate: #3b2118;
+  --brown: #6d4028;
+  --caramel: #b87832;
+  --gold: #e3a640;
+  --cream: #f8f0e3;
+  --paper: #fffaf2;
+  --muted: #8d796b;
+  --line: rgba(59, 33, 24, .14);
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.site-header {
+  min-height: 82px; padding: 0 7vw; display: flex; align-items: center;
+  justify-content: space-between; gap: 24px; background: var(--paper);
+  border-bottom: 1px solid var(--line); position: relative; z-index: 5;
+}
+.brand { display: inline-flex; align-items: center; gap: 11px; }
+.brand-mark {
+  width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%;
+  color: var(--gold); background: var(--ink); border: 1px solid var(--gold);
+  font: 700 15px var(--serif); letter-spacing: -1px;
+}
+.brand-name { font-size: 12px; letter-spacing: 2px; font-weight: 500; line-height: 1.1; }
+.brand-name b { color: var(--caramel); }
+.brand-name small { display: block; margin-top: 5px; font: italic 11px var(--serif); letter-spacing: .3px; color: var(--muted); }
+.main-nav { display: flex; align-items: center; gap: 34px; }
+.main-nav a, .nav-cta { font-size: 12px; font-weight: 600; transition: color .2s ease; }
+.main-nav a:hover, .footer-links a:hover { color: var(--caramel); }
+.nav-cta { padding: 13px 18px; border: 1px solid var(--ink); border-radius: 2px; }
+.nav-cta span { color: var(--caramel); margin-left: 8px; }
+.hero {
+  min-height: 660px; padding: 76px 9vw 56px; display: grid; grid-template-columns: 1.05fr .95fr;
+  align-items: center; gap: 7vw; position: relative; overflow: hidden;
+  background: radial-gradient(circle at 85% 35%, #f0dfc4 0, transparent 33%), var(--cream);
+}
+.hero-copy { max-width: 590px; position: relative; z-index: 1; }
+.eyebrow { margin: 0 0 20px; color: var(--caramel); font-size: 10px; font-weight: 700; letter-spacing: 2.5px; }
+.hero .eyebrow span { display: inline-block; width: 23px; height: 2px; background: var(--gold); vertical-align: middle; margin-right: 8px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: var(--serif); letter-spacing: -1.8px; }
+h1 { margin-bottom: 22px; font-size: clamp(46px, 6vw, 76px); line-height: 1.05; }
+h1 em, h2 em, .product-info h3 em { color: var(--caramel); font-weight: 600; }
+.hero-description { max-width: 475px; color: #715f52; font-size: 15px; line-height: 1.9; }
+.hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 31px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 22px; padding: 15px 21px; font-size: 12px; font-weight: 700; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-3px); }
+.button-gold { color: var(--ink); background: var(--gold); }
+.button-gold:hover { background: #edbd65; }
+.text-link { font-size: 12px; font-weight: 700; border-bottom: 1px solid var(--caramel); padding-bottom: 5px; }
+.hero-note { display: flex; gap: 13px; align-items: center; margin-top: 50px; }
+.note-icon { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #d8b77f; border-radius: 50%; color: var(--caramel); }
+.hero-note p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.hero-note strong { color: var(--ink); }
+.hero-visual { max-width: 500px; justify-self: end; width: 100%; }
+.image-frame { position: relative; padding: 13px; background: #fffaf4; box-shadow: 0 24px 60px rgba(59,33,24,.16); transform: rotate(1.5deg); }
+.image-frame img { width: 100%; height: 420px; object-fit: cover; }
+.image-sticker { position: absolute; left: -28px; bottom: 28px; width: 105px; height: 105px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; background: var(--gold); color: var(--ink); transform: rotate(-10deg); box-shadow: 0 8px 20px #3b211833; }
+.image-sticker span { font-size: 8px; letter-spacing: 2px; }
+.image-sticker b { margin-top: 3px; font: 700 19px/1 var(--serif); text-align: center; }
+.hero-caption { display: flex; justify-content: space-between; margin-top: 23px; color: var(--muted); font-size: 9px; letter-spacing: 1.7px; }
+.hero-caption span:first-child { color: var(--caramel); }
+.hero-bottomline { position: absolute; bottom: 0; left: 9vw; right: 9vw; padding: 17px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; color: #9b8878; font-size: 9px; letter-spacing: 2px; }
+.section-wrap { width: min(1120px, 84%); margin-inline: auto; }
+.intro { padding-top: 112px; padding-bottom: 110px; display: grid; grid-template-columns: 1fr 1fr; gap: 25px 9%; }
+.section-heading h2, .season-top h2, .goals h2 { margin: 0; font-size: clamp(37px, 4.5vw, 56px); line-height: 1.1; }
+.intro-text { align-self: end; max-width: 500px; color: #79685c; font-size: 14px; line-height: 1.9; }
+.intro-text p:last-child { margin-bottom: 0; }
+.values-row { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 50px; }
+.values-row article { padding: 24px 25px; border-top: 1px solid var(--line); }
+.value-number { color: var(--caramel); font: 700 13px var(--serif); }
+.values-row h3 { margin: 17px 0 7px; font: 700 20px var(--serif); }
+.values-row p { margin: 0; color: var(--muted); font-size: 12px; }
+.season-section { padding: 100px 0 90px; background: #f1e6d6; }
+.season-top { display: flex; justify-content: space-between; align-items: end; gap: 50px; margin-bottom: 48px; }
+.season-lead { max-width: 365px; margin: 0 0 4px; color: #78675a; font-size: 13px; line-height: 1.8; }
+.product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.product-card { background: var(--paper); box-shadow: 0 12px 35px rgba(59,33,24,.07); overflow: hidden; }
+.product-tag { padding: 17px 22px; color: var(--caramel); font-size: 9px; font-weight: 700; letter-spacing: 2px; }
+.summer-art { height: 270px; position: relative; overflow: hidden; display: grid; place-items: center; background: linear-gradient(135deg, #f7d99e, #f0bd72); }
+.sun-shape { position: absolute; width: 210px; height: 210px; right: 8%; top: -95px; border-radius: 50%; background: #f8e7bb; opacity: .7; }
+.pancake-stack { position: relative; width: 230px; height: 130px; margin-top: 70px; transform: rotate(-4deg); }
+.pancake-stack i { position: absolute; left: 0; width: 225px; height: 40px; border-radius: 50%; background: linear-gradient(#e9ae52 0 35%, #c57d32 36% 50%, #f5c36f 52% 100%); border: 3px solid #8d4d25; box-shadow: 0 5px 0 #8d4d25; }
+.pancake-stack i:nth-child(1) { top: 0; } .pancake-stack i:nth-child(2) { top: 27px; } .pancake-stack i:nth-child(3) { top: 54px; } .pancake-stack i:nth-child(4) { top: 81px; }
+.berry { position: absolute; z-index: 2; color: #a92d28; font-size: 44px; text-shadow: 0 2px 0 #6d211a; }
+.berry-one { top: 62px; left: 35%; } .berry-two { top: 45px; right: 31%; font-size: 34px; }
+.strawberry { position: absolute; z-index: 3; font-size: 38px; filter: drop-shadow(0 4px 2px #7b3d2533); }
+.strawberry-one { top: 62px; left: 39%; } .strawberry-two { top: 95px; right: 34%; font-size: 30px; }
+.fudge-drop { position: absolute; z-index: 4; width: 115px; height: 22px; top: 130px; left: 50%; transform: translateX(-50%); border-radius: 50%; background: #5a2d1c; box-shadow: 0 9px 0 -3px #5a2d1c; opacity: .9; }
+.product-info { padding: 28px 30px 32px; }
+.product-kicker { margin-bottom: 12px; color: var(--caramel); font-size: 9px; font-weight: 700; letter-spacing: 1.7px; }
+.product-info h3 { margin: 0 0 13px; font: 700 35px/1.03 var(--serif); }
+.product-info > p:not(.product-kicker) { min-height: 72px; color: #78675a; font-size: 12px; line-height: 1.8; }
+.ingredient-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 22px; }
+.ingredient-list span { padding: 7px 10px; color: #76543e; background: #f4eadc; border-radius: 30px; font-size: 9px; }
+.product-photo { height: 270px; position: relative; overflow: hidden; background: #3b2118; }
+.product-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+.photo-label { position: absolute; left: 18px; bottom: 18px; padding: 9px 12px; color: var(--ink); background: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.menu-footnote { margin-top: 25px; color: #877366; font-size: 10px; }
+.menu-footnote span { color: var(--caramel); margin-right: 7px; }
+.goals { padding-top: 112px; padding-bottom: 120px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; }
+.goals-heading > p:last-child { max-width: 310px; margin-top: 23px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.goals-list article { display: grid; grid-template-columns: 38px 1fr 20px; gap: 15px; align-items: start; padding: 21px 0; border-bottom: 1px solid var(--line); }
+.goals-list article:first-child { border-top: 1px solid var(--line); }
+.goals-list article > span { padding-top: 4px; color: var(--caramel); font: 700 12px var(--serif); }
+.goals-list h3 { margin: 0 0 5px; font: 700 17px var(--serif); }
+.goals-list p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.goals-list article > b { color: var(--caramel); }
+.closing-banner { padding: 90px 8%; color: var(--cream); text-align: center; background: radial-gradient(circle at 50% 0, #65402b, transparent 55%), var(--ink); }
+.closing-inner h2 { margin: 0 0 28px; font-size: clamp(40px, 5vw, 62px); line-height: 1.05; }
+.closing-inner h2 em { color: var(--gold); }
+.button-light { color: var(--ink); background: var(--cream); }
+.site-footer { padding: 60px 8% 22px; color: var(--cream); background: #170e0a; }
+.footer-main { display: grid; grid-template-columns: 1.4fr .7fr .8fr 1fr; gap: 35px; padding-bottom: 50px; }
+.brand-footer .brand-mark { color: var(--ink); background: var(--gold); border-color: var(--gold); }
+.brand-footer .brand-name b { color: var(--gold); }
+.brand-footer .brand-name small { color: #bda998; }
+.footer-brand > p { margin: 18px 0 0; color: #a99585; font: italic 14px var(--serif); }
+.footer-links h4 { margin: 4px 0 18px; color: var(--gold); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; }
+.footer-links a { display: block; width: fit-content; margin: 11px 0; color: #c6b6a8; font-size: 11px; }
+.creator { padding-left: 20px; border-left: 1px solid #594235; }
+.creator span, .creator small { display: block; color: #a99585; font-size: 9px; letter-spacing: 1px; }
+.creator strong { display: block; margin: 12px 0 7px; color: var(--gold); font: 700 19px var(--serif); }
+.creator small { letter-spacing: 0; font-size: 10px; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 20px; border-top: 1px solid #493329; color: #907d6e; font-size: 9px; letter-spacing: .4px; }
+
+@media (max-width: 850px) {
+  .site-header { padding-inline: 5%; }
+  .main-nav { gap: 16px; }
+  .hero { padding-inline: 7%; gap: 5vw; }
+  .hero-visual { max-width: 390px; }
+  .image-frame img { height: 360px; }
+  .section-wrap { width: 86%; }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .site-header { min-height: 72px; flex-wrap: wrap; padding: 13px 5%; gap: 12px; }
+  .brand-mark { width: 37px; height: 37px; }
+  .main-nav { order: 3; width: 100%; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--line); }
+  .main-nav a { font-size: 10px; }
+  .nav-cta { padding: 10px 12px; font-size: 10px; }
+  .hero { display: flex; flex-direction: column; align-items: stretch; padding: 58px 7% 60px; gap: 45px; }
+  h1 { font-size: clamp(43px, 12vw, 61px); }
+  .hero-description { font-size: 13px; }
+  .hero-note { margin-top: 30px; }
+  .hero-visual { width: 90%; max-width: none; align-self: center; }
+  .image-frame img { height: 340px; }
+  .hero-bottomline { left: 7%; right: 7%; font-size: 7px; letter-spacing: 1px; }
+  .intro { padding-top: 75px; padding-bottom: 75px; display: block; }
+  .intro-text { margin-top: 25px; }
+  .values-row { grid-template-columns: 1fr; gap: 0; margin-top: 30px; }
+  .values-row article { padding: 17px 5px; }
+  .season-section { padding: 75px 0; }
+  .season-top { display: block; margin-bottom: 30px; }
+  .season-lead { margin-top: 22px; }
+  .product-grid { grid-template-columns: 1fr; gap: 22px; }
+  .product-info { padding: 25px 23px 28px; }
+  .product-info > p:not(.product-kicker) { min-height: auto; }
+  .goals { display: block; padding-top: 75px; padding-bottom: 80px; }
+  .goals-list { margin-top: 38px; }
+  .closing-banner { padding: 75px 7%; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .creator { padding-left: 0; border-left: 0; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
